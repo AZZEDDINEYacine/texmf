@@ -1,0 +1,51 @@
+% In this segment, enter the desired data to be shown at the title page
+\renewcommand{\hmwkAuthorName}{}
+\renewcommand{\hmwkTitle}{Pointset Topology}
+\newcommand{\hmwkSubTitle}{prerequisite problem set}
+\newcommand{\hmwkSummary}{}
+\newcommand{\dueDate}{Translated Headline}
+\newcommand{\university}{National Higher School of Mathematics}
+
+%------------------------------------------------------------------------------
+\newenvironment{myfont}{\fontfamily{phv}\selectfont}{\par}
+
+
+\thispagestyle{empty}
+\myfont
+\raggedright
+% Use this line of code if both SLU loggo and company/other institution loggo is desired. The positions are possible to change with the \hspace and \vspace syntax.
+\begin{figure} [H]
+    \centering
+    \begin{minipage}[t]{.30\linewidth}
+    \raggedright
+    \includegraphics[width=0.8\linewidth]{eureka.logo.jpg}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\linewidth}
+        \raggedleft
+        \includegraphics[width =0.8\linewidth]{nhsm.logo.png}
+    \end{minipage}
+\end{figure}
+
+
+% Adds background picture. Delete code if no background picture is wanted.
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south west, 
+      xshift=-0.2cm, 
+      yshift=-0.2cm] 
+     at (current page.south west)
+     {\includegraphics[width = \paperwidth]{background.png}}; 
+\end{tikzpicture}
+
+
+\vspace{1cm}
+\par\noindent
+\Huge\textbf{\hmwkTitle}
+\vspace{0.2cm}
+\LARGE\par\noindent- \hmwkSubTitle\\
+\rule[0.3cm]{\linewidth}{2pt}
+\Large\noindent\textit{\hmwkSummary}
+\vspace{2cm}
+\noindent\LARGE\hmwkAuthorName\\
+\vspace{4 cm}
+\small\par\noindent\university
