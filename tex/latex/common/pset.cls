@@ -4,6 +4,7 @@
 \usepackage{tikz}
 \usepackage{lipsum}
 \pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
 % Always typeset math in display style
 \newcommand{\hmwkTitle}{1st\ hw}
 \newcommand{\hmwkDueDate}{}
@@ -52,7 +53,7 @@
         \centering
         \begin{minipage}[t]{.45\linewidth}
             \raggedright
-            \includegraphics[height=3cm]{eureka.logo.jpg}
+            \includegraphics[height=3cm]{IMM Logo.png}
         \end{minipage}%
         \hfill
         \begin{minipage}[t]{.45\linewidth}
@@ -78,6 +79,7 @@
     \LARGE\par\noindent- \hmwkTitle\hfill \noindent\small Due: \hmwkDueDate\\
     \vspace{0.2cm}
     \rule[0.3cm]{\linewidth}{2pt}
+    \par\noindent \hmwkAuthorName
     \large\noindent\textit{\hmwkSummary}\\
     \vspace{0.2cm}
     \vspace{4 cm}

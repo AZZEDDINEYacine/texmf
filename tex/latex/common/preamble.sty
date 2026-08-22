@@ -3,6 +3,7 @@
 % Standard mathematical typesetting packages
 \RequirePackage{amsfonts, amsthm, amsmath, amssymb}
 \RequirePackage{mathtools}
+\RequirePackage{xparse}
 \RequirePackage{bbm}
 
 % Symbol and utility packages
@@ -54,6 +55,8 @@
 \newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
 \newcommand{\symdiff}{\mathbin{\vcenter{\hbox{\scalebox{.75}{$\triangle$}}}}}
 \newcommand{\bigast}{\mathop{\scalebox{1.7}{$\ast$}}}
+\newcommand{\limn}{\lim_{n\to\i}}
+
 
 \renewcommand{\div}{\divisionsymbol}
 
@@ -70,8 +73,16 @@
 \def\bR{\mbb{R}}
 \def\bQ{\mbb{Q}}
 \def\bZ{\mbb{Z}}
+\def\bE{\mbb E}
+\def\bP{\mbb P}
 \def\Chi{\scalebox{1.25}{$\chi$}}
 \newcommand*\dd{\mathop{}\!\mathrm{d}}
+\NewDocumentCommand{\pderiv}{o O{x}}{%
+  \IfNoValueTF{#1}{\frac{\partial}{\partial #2}}{\frac{\partial #1}{\partial #2}}%
+}
+\NewDocumentCommand{\deriv}{o O{x}}{%
+  \IfNoValueTF{#1}{\frac{\mathrm{d}}{\mathrm{d}#2}}{\frac{\mathrm{d}#1}{\mathrm{d}#2}}%
+}
 \newcommand{\rp}{\right)}
 \newcommand{\lp}{\left(}
 \newcommand{\rb}{\right]}
@@ -87,7 +98,7 @@
   \tmp
 }
 \renewcommand{\P}[1]{\operatorname{P}\lp #1\rp}
-\newcommand{\T}{\operatorname{T}}
+\newcommand{\EV}{\operatorname{EV}}
 \newcommand{\sgn}{\operatorname{sgn}}
 \newcommand{\io}{\text{ i.o.}}
 \DeclareMathOperator{\img}{Img}
@@ -104,6 +115,7 @@
     \(\blacktriangleright\)%
   }%
 }
+\newcommand{\til}{\widetilde}
 
 \let\oldi\i
 \let\i\infty
